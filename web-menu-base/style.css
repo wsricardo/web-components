@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+}
+
+nav {
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: whitesmoke;
+    font-size: 16px;
+    padding: 6px
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+nav li {
+    list-style: none;
+    
+}
+
+nav a{
+    text-decoration: none;
+    padding: 6px;
+    
+}
+
+nav a:hover{
+    /*margin: 0 auto;*/
+    color: red;
+    background-color:rgb(197, 214, 214);    
+}

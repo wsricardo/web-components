@@ -1,3 +1,13 @@
+/*
+* Simple basic menu with background.
+* Menu simples ao passar o mouse no item o elemento muda cor de 
+* background e de fonte e adiciona uma borda inferior (border-bottom).
+* Author: WSRicardo
+* Page: https://wsricardo.blogspot.com
+* Site: www.dimensaoalfa.com.br
+* Github: www.github.com/wsricardo
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -40,6 +50,8 @@ nav a{
 
 nav a:hover{
     /*margin: 0 auto;*/
-    color: red;
-    background-color:rgb(197, 214, 214);    
+    color: rgb(116, 18, 18);
+    background-color:rgb(197, 214, 214);
+    border-bottom: 2px solid blue;
+    transition-duration: 8ms;
 }

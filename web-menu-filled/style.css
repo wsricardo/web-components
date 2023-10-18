@@ -13,8 +13,6 @@ header {
     justify-content: space-between;
     flex-direction: row;
     color:black;
-    /*background-color: antiquewhite;*/
-    /*width: 100%;*/
 
 }
 
@@ -22,11 +20,15 @@ header {
 /* Menu, links de navegação*/
 nav {
     padding: 4px;
+    
 }
 
 nav a {
     text-decoration: none;
     padding: 8px;
+    color: rgb(11, 119, 233);
+    /*transition: 600ms; /*Transition effect in menu changes*/
+    
 }
 
 nav a:hover {
@@ -34,9 +36,17 @@ nav a:hover {
     background-color: rgb(11, 119, 233);
     border-radius: 18px;
     color: white;
+    /* Effect animatiom for menu. Discoment to apply.
+    animation-name: anim-menu;
+    animation-duration: 712ms;*/
     
 }
 
+/* Animation effect for menu. */
+@keyframes anim-menu {
+    from { background-color: white; color: rgb(11, 119, 233)}
+    to { background-color: rgb(11, 119, 233); color: white;}
+}
 .logo {
     color: rgb(11, 119, 233);
 

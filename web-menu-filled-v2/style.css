@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Área do header (cabeçalho) com nome do site e menu*/
+header {
+
+    display: flex;
+    padding 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: center;*/
+    align-content: center;
+    color: black;
+
+}
+
+
+/* Menu, links de navegação*/
+nav {
+    padding: 4px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    padding: 8px;
+    color: rgb(11, 119, 233);
+    /*transition: 600ms; /*Transition effect in menu changes*/
+    
+}
+
+nav a:hover {
+
+    background-color: rgb(11, 119, 233);
+    border-radius: 12px;
+    color: white;
+    /* Effect animatiom for menu. Discoment to apply.
+    animation-name: anim-menu;
+    animation-duration: 712ms;*/
+    
+}
+
+/* Animation effect for menu. */
+@keyframes anim-menu {
+    from { background-color: white; color: rgb(11, 119, 233)}
+    to { background-color: rgb(11, 119, 233); color: white;}
+}
+
+.horizontal-menu-bar {
+    display: flex;
+    padding: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    /* Alinhamento dos elementos. Posicionamento. Ajustável. */
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    /* Fim */
+    flex-direction: row;
+    color:black;
+}
+
+.logo {
+    color: rgb(11, 119, 233);
+}
+
+.header-top {
+    width: 100%; /* width below menu bar */
+    height: 0; /*Height bello mmenu bar.  Personalizar tamanho da área acima da barra de menu (menu bar). */
+
+}
+
+.header-bottom{
+    /* Configure size area bottom of menu bar */
+    width: 100%;
+    height: 0; 
+}
+
+/* Mobile styles rules property. */

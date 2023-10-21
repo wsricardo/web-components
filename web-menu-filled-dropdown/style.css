@@ -90,6 +90,20 @@ nav ul li {
     
 }
 
+.mobile-menu {
+    display: none;
+}
+
+#nav {
+    /*display: none;*/
+}
+
+#closeMenu {
+    display: none;
+}
+
+
+
 /* Animation effect for menu. */
 @keyframes anim-menu {
     from { background-color: white; color: rgb(11, 119, 233)}
@@ -171,6 +185,7 @@ nav ul li {
     .mobile-menu {
         padding: 8px;
         display: block;
+        visibility: visible;
         cursor: pointer;
     }
 
@@ -185,12 +200,16 @@ nav ul li {
     }
 
     #closeMenu {
+        display: block;
         color:blue;
         cursor: pointer;
+        
     }
 
     #nav {
         box-shadow: 0 1px 6px 1px rgba(162, 198, 216, 0.574)
     }
+
+    
 }
 /* End Mobile Rules. */

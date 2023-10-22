@@ -90,6 +90,10 @@ nav ul li {
     
 }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
 /* Animation effect for menu. */
@@ -154,6 +158,7 @@ nav ul li {
         align-items: flex-start;
         
     }
+<<<<<<< Updated upstream
 
     nav {
         display: none;
@@ -211,4 +216,11 @@ nav ul li {
         text-decoration: none;
     }
 
+=======
+    
+   
+
+    
+}
+>>>>>>> Stashed changes
 /* End Mobile Rules. */

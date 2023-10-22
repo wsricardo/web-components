@@ -13,7 +13,7 @@
         <div class="horizontal-menu-bar">
 
         <div class="logo">Logo</div>
-        <div class="mobile-menu" id="mobile-menu" onclick="menuClick();">
+        <div class="mobile-menu" id="mobile-menu" onclick="menuClick();" >
             <svg width="50" height="50">
                 <rect width="30" height="4" x="0" y="0" rx="2" ry="2" style="fill:rgb(189, 207, 223); " />
                 <rect width="30" height="4" x="0" y="6" rx="2" ry="2" style="fill:rgb(189, 207, 223);" />
@@ -23,21 +23,21 @@
         </div>
             <nav id="nav">
                 <ul>
-                    <li id="closeMenu" onclick="menuClick();">x</li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Notícias</a></li>
-                    <li class="dropdown">
-                        <a href="">Galeria</a>
-                        <div class="dropdown-content">
-                            <a href="">Vídeos</a>
-                            <a href="">Fotos</a>
+                    <li ><button id="closeMenu"  onclick="menuClick();">x</button></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li class="dropdown" onmouseenter="openSubMenu();" onclick="openSubMenu();" onmouseleave="closeDrop();">
+                        <a href="#" ">Galeria</a>
+                        <div class="dropdown-content" id="drop">
+                            <a href="#">Vídeos</a>
+                            <a href="#">Fotos</a>
                         </div>
                     </li>
 
-                    <li><a href="">Projetos</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
 
             </nav>
@@ -51,21 +51,41 @@
     <script>
         let q = document.getElementById("mobile-menu");
         let nav = document.getElementById("nav");
-        let opened = false;
+        let closeMenu = document.getElementById("closeMenu");
+        let drop = document.getElementById("drop");
+
+        let opened_nav = false;
 
         function menuClick() {
-            console.log("Clicked!", opened)
-            if ( opened == false ){
-                q.style = "display: none; ";
-                nav.style.display = "block";
-                opened = true;
+            console.log("Clicked!", opened_nav)
+            if ( opened_nav == false ){
+                q.style = "display: none;  ";
+                nav.style = "display: inline-block;";
+                closeMenu.style = "display: inline-block;";
+                
+                opened_nav = true;
             } else {
-                opened = false;
+                opened_nav = false;
                 nav.style.display = "none";
-                q.style.display = "block"
+                nav.style.visibility = "hidden";
+                q.style.display = "inline-block";
+                drop.style = "display: none;";
+                
             }
             
         }   
+
+        // Dropdown-content
+        function openSubMenu(){
+
+            drop.style.visibility = "visible";
+            drop.style.display = "block";
+        }
+
+        // Close submenu
+        function closeDrop(){
+            drop.style.display = "none";
+        }
 
     </script>
 </body>
